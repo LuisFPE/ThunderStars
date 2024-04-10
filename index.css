@@ -4,28 +4,20 @@ body {
     background-image: linear-gradient(to right, yellow , red);
 }
 
-#Banner {
+section > #Banner {
     width: 100%;
 }
 
-#titulo {
+#header > div h1 {
     text-align: center;
     margin-top: -30vh;
     color: gold;
     font-size: 8rem;
-    -webkit-text-stroke: 2px black;
+    -webkit-text-stroke: 3px black;
     font-family: "Metal Mania";
 }
 
-input {
-    background-color: transparent;
-    border-radius: 15px;
-    padding-left: 12px;
-    margin-right: 2vw;
-    margin-left: 2vw;
-}
-
-section {    
+#inputs {    
     width: 100%;
     margin-top: 20vh;
     display: flex;
@@ -38,10 +30,18 @@ article {
     align-items: center;
 }
 
+section > article > input {
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding-left: 12px;
+    margin: 0 2vw;    
+}
+
 /* Crear la adaptacion para moviles */
 
 @media (max-width: 1000px) {
-    section {
+    #inputs {
         display: flex;
         flex-direction: column;
     }

@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ThunderStars WikiMarvel</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&display=swap" rel="stylesheet">
@@ -13,23 +14,28 @@
 
 </head>
 <body>
-    <img src="./img/banner.png" alt="" id="Banner">
-    <h1 id="titulo">THUNDERSTARS</h1>
-    <section>
-        <article>
-            <h2>Personaje:</h2>    
-            <input type="text" class="border border-danger" placeholder="Ingresar">
-            <button id="btn-personaje" class="btn btn-danger">Buscar</button>
-        </article>
-        <article>
-            <h2>Comic:</h2>    
-            <input type="text" class="border border-warning" placeholder="Ingresar">
-            <button id="btn-comic" class="btn btn-warning ">Buscar</button>
-        </article>
-    </section>
+    <div id="complete">
+        <section id="header">
+            <img src="./img/banner.png" alt="" id="Banner">
+            <div id="title">
+                <h1>THUNDERSTARS</h1>
+            </div>
+        </section>
 
-    <div id="presentacion">
+        <section id="inputs">
+            <article>
+                <label for="character"><h2>Character:</h2> </label>  
+                <input type="text" id="character" class="border border-danger" placeholder="Write here">
+                <button id="btn-personaje" class="btn btn-danger">Find</button>
+            </article>
+            <article>
+                <label for="comic"><h2>Comic:</h2></label>
+                <input type="text" id="comic" class="border border-warning" placeholder="Write here">
+                <button id="btn-comic" class="btn btn-warning ">Find</button>
+            </article>
+        </section>
 
+        <div id="presentacion"></div>
     </div>
 </body>
 </html>
