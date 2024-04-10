@@ -31,13 +31,15 @@ article {
     align-items: center;
 }
 
-section > article > input {
-    background-color: transparent;
-    border: 2px solid black;
+.userInput {
+    background-color: #4d4d4d73;
+    font-size: 1.2em;
+    border: solid 2px #a08b12ce;
     border-radius: 15px;
     padding-left: 12px;
     margin: 0 2vw;    
 }
+
 
 /* Crear la adaptacion para moviles */
 
