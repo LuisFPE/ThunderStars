@@ -5,15 +5,16 @@ body {
 }
 
 section > #Banner {
-    width: 100%;
+    width: 2000px;
+    overflow: visible;
 }
 
 #header > div h1 {
     text-align: center;
     margin-top: -30vh;
     color: gold;
-    font-size: 8rem;
-    -webkit-text-stroke: 3px black;
+    font-size: 8em;
+    -webkit-text-stroke: 2px black;
     font-family: "Metal Mania";
 }
 
@@ -41,6 +42,10 @@ section > article > input {
 /* Crear la adaptacion para moviles */
 
 @media (max-width: 1000px) {
+    #header > div h1 {
+        font-size: 6em;
+    }
+
     #inputs {
         display: flex;
         flex-direction: column;
@@ -61,3 +66,8 @@ section > article > input {
     }
   }
   
+  @media (max-width: 800px) {
+    #header > div h1 {
+        font-size: 4em;
+    }
+  }
