@@ -1,16 +1,14 @@
-body{
+body {
     margin: 0px;
     width: 100%;
-
     background-image: linear-gradient(to right, yellow , red);
-  
 }
 
-#Banner{
+#Banner {
     width: 100%;
 }
 
-#titulo{
+#titulo {
     text-align: center;
     margin-top: -30vh;
     color: gold;
@@ -19,24 +17,23 @@ body{
     font-family: "Metal Mania";
 }
 
-input{
+input {
     background-color: transparent;
+    border-radius: 15px;
+    padding-left: 10px;
+    margin-right: 2vw;
+    margin-left: 2vw;
 }
 
-section{    
+section {    
     width: 100%;
     margin-top: 20vh;
     display: flex;
     justify-content: space-around;
 }
 
-article{
+article {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-article > input{
-    margin-right: 2vw;
-    margin-left: 2vw;
 }
