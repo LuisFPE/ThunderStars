@@ -1,0 +1,42 @@
+body{
+    margin: 0px;
+    width: 100%;
+
+    background-image: linear-gradient(to right, yellow , red);
+  
+}
+
+#Banner{
+    width: 100%;
+}
+
+#titulo{
+    text-align: center;
+    margin-top: -30vh;
+    color: gold;
+    font-size: 8rem;
+    -webkit-text-stroke: 1px black;
+    font-family: "Metal Mania";
+}
+
+input{
+    background-color: transparent;
+}
+
+section{    
+    width: 100%;
+    margin-top: 20vh;
+    display: flex;
+    justify-content: space-around;
+}
+
+article{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+article > input{
+    margin-right: 2vw;
+    margin-left: 2vw;
+}
