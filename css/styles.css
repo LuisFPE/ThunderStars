@@ -40,3 +40,20 @@ article > input{
     margin-right: 2vw;
     margin-left: 2vw;
 }
+.fire {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Asegura que el fuego esté detrás del contenido */
+    pointer-events: none; /* Evita que el fuego interfiera con los clics */
+    background: radial-gradient(circle, #ff9300, #ff3300, #cc0000);
+    animation: flicker 0.5s infinite alternate-reverse;
+  }
+  
+  @keyframes flicker {
+    0% { opacity: 0.8; }
+    100% { opacity: 1; }
+  }
+  
