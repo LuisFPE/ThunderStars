@@ -1,3 +1,7 @@
+/* html {
+    cursor: url("./img/cursor.png");
+} */
+
 body {
     margin: 0px;
     width: 100%;
@@ -42,7 +46,7 @@ article {
     border: solid 2px #a08b12ce;
     border-radius: 15px;
     padding-left: 12px;
-    margin: 0 2vw;    
+    margin: 0 2vw;   
 }
 
 
