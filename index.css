@@ -5,8 +5,8 @@ body {
 }
 
 section > #Banner {
-    width: 2000px;
-    overflow: visible;
+    height: 600px;
+    overflow: hidden;
 }
 
 #header > div h1 {
@@ -44,6 +44,11 @@ article {
 /* Crear la adaptacion para moviles */
 
 @media (max-width: 1000px) {
+    section > #Banner {
+        height: 500px;
+        overflow: hidden;
+    }
+
     #header > div h1 {
         font-size: 6em;
     }
@@ -69,6 +74,11 @@ article {
   }
   
   @media (max-width: 800px) {
+    section > #Banner {
+        height: 400px;
+        overflow: hidden;
+    }
+
     #header > div h1 {
         font-size: 4em;
     }
