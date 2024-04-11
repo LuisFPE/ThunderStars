@@ -21,7 +21,7 @@ buttonCharacter.addEventListener('click', (e) => {
 });
 
 buttonComic.addEventListener('click', (e) => {
-    if (inputComic.value.length > 0) {
+    if (buttonComic.value.length > 0) {
         alert(`Estas buscando informacion sobre ${inputComic.value}, lamentablemente la API aun esta en construccion y no hay informacion para mostrarte`);
     } else {
         alert(`Lamentamos informar que la API aun esta en construccion y no hay informacion para mostrarte`);
