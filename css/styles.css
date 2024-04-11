@@ -49,8 +49,8 @@ article > input{
     height: 100%;
     z-index: -1; /* FUEGO detrás del contenido */
     pointer-events: none; /* EVITA que el fuego interfiera con los clics */
-    background: linear-gradient(#ff9300, #ff3300, #cc0000);
-    animation: flicker 0.8s infinite alternate-reverse;
+    background: radial-gradient(circle, #ff9300, #ff3300, #cc0000);
+    animation: flicker 0.5s infinite alternate-reverse;
   }
   
   @keyframes flicker {
