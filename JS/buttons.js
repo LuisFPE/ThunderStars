@@ -13,13 +13,13 @@ const buttonComic = document.getElementById('btn-comic');
 // Añadir las funciones de llamada de API
 async function getMarvels() {
     const url = new URL("https://gateway.marvel.com:443/v1/public/characters?apikey=295966637e5c92693cf21758d4481539");
-    url.searchParams.append("name", inputCharacter.textContent);
-    url.searchParams.append('hash', '734e4e50451108fbdb91a833017b97d90ea9eac5')
+    url.searchParams.append('name', inputCharacter.value);
+    url.searchParams.append('hash', 'd9ff78a23b918b8ffbf54eec573c8c39')
+    url.searchParams.append('ts', '1');
     try {
         const response = await fetch(url.toString());
         const data = await response.json();
         console.log(data);
-        alert(data);
     }
     catch (error) {
         console.error(error);
