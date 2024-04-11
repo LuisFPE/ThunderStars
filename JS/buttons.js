@@ -10,6 +10,12 @@ const buttonCharacter = document.getElementById('btn-character');
 const buttonComic = document.getElementById('btn-comic');
 
 
+// Añadir las funciones de llamada de API
+async function llamarAPI () {
+    //
+}
+
+
 // Usar un escuchador de eventos cuando se hace click en alguno de los dos botones
 // Dentro del escuchador de eventos se añade una funcion flecha con lo que hara al ser pulsado
 buttonCharacter.addEventListener('click', (e) => {
