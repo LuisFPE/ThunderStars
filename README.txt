@@ -18,7 +18,7 @@ d9ff78a23b918b8ffbf54eec573c8c39
 
 Explicacion Hash:
 
-Para pider usar la API de Marvel nos obliga a añadir una encriptacion Hash MD5 a la URL de llamada.
+Para poder usar la API de Marvel nos obliga a añadir una encriptacion Hash MD5 a la URL de llamada.
 Esta encriptacion Hash MD5 debe ser una combinacion (En este orden) del TimesTamp, APIKey Privada y APIKey Publica.
 El codigo resultante de crear la encriptacion Hash MD5 es la que la API de Marvel obliga a añadir a la URL de llamada a la API.
 No es necesario crear la encriptacion con cada llamada, los daros de las claves no cambian por lo que el HASH MD5 va a ser el mismo.
