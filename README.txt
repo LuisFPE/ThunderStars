@@ -6,6 +6,9 @@ Hi AxfANq663915842!
 
 Here's your personal Marvel Comics API information:
 
+URL con documentacion sobre la autentificacion:
+https://developer.marvel.com/documentation/authorization
+
 Your public key
 295966637e5c92693cf21758d4481539
 Your private key
