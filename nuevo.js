@@ -79,9 +79,6 @@ async function getPersonajes(primero, segundo){
     // Eliminar las busquedas anteriores
     let selectDelete = document.getElementById('names');
     selectDelete.innerHTML = `<option class='' id="vacio" value="">Seleccione un personaje</option>`;
-
-    let audio = document.getElementById('my_audio');
-    audio.play();
     
     // Traer informacion del localStorage para el bucle de busquedas
     let comprobarPrimero = localStorage.getItem('primero');
@@ -128,7 +125,7 @@ function cargaDelay() {
             })
         }
 
-    }, 1000 * 2);
+    }, 1000 * 1.8);
 }
 
 
