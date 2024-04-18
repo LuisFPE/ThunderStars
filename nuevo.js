@@ -174,6 +174,7 @@ async function getPersonajeSeleccionado(name) {
     name_create.setAttribute('value', MarvelName);
     name_create.innerText = MarvelName;
     description_create.innerText = MarvelDescription;
+    personajeWrap.style.backgroundColor = 'rgb(238, 95, 69)';
 
     // Recopilar la informacion de los comis relacionados con el personaje seleccionado
     const MarvelComics = data.data.results[0].comics.items;
