@@ -88,8 +88,8 @@ async function getPersonajes(primero, segundo){
 
 
     for (let i = primero; i < segundo; i+=20) {
-        let strhash = "9ee928aa29d4ce8bb3cd70c67a2255ef" ;
-        const url = new URL(`https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=062384275ca95f55e7ce656b34dab77a&hash=${strhash}&offset=${i}`)
+        let strhash = "d9ff78a23b918b8ffbf54eec573c8c39" ;
+        const url = new URL(`https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=295966637e5c92693cf21758d4481539&hash=${strhash}&offset=${i}`)
 
         const response = await fetch(url.toString());
         const data =  await response.json();
@@ -157,8 +157,8 @@ MarvelCard.appendChild(personajeWrap);
 // Solo hare que carguen 10 comics, si tiene mas no apareceran
 async function getPersonajeSeleccionado(name) {
     // Aqui el personaje seleccionado
-    let strhash = "9ee928aa29d4ce8bb3cd70c67a2255ef";
-    const url = new URL(`https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=062384275ca95f55e7ce656b34dab77a&hash=${strhash}&name=${name}`)
+    let strhash = "d9ff78a23b918b8ffbf54eec573c8c39";
+    const url = new URL(`https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=295966637e5c92693cf21758d4481539&hash=${strhash}&name=${name}`)
 
     const response = await fetch(url.toString());
     const data =  await response.json();
@@ -197,8 +197,8 @@ async function getPersonajeSeleccionado(name) {
             // Crear funcion async para llamar a la API con las URL que me da junto con los comics
             getComics();
             async function getComics() {
-                let strhash = "9ee928aa29d4ce8bb3cd70c67a2255ef";
-                const url = new URL(`${MarvelComics_url}?ts=1&apikey=062384275ca95f55e7ce656b34dab77a&hash=${strhash}`)
+                let strhash = "d9ff78a23b918b8ffbf54eec573c8c39";
+                const url = new URL(`${MarvelComics_url}?ts=1&apikey=295966637e5c92693cf21758d4481539&hash=${strhash}`)
             
                 const response = await fetch(url.toString());
                 const data =  await response.json();
