@@ -115,6 +115,7 @@ article > input{
 
 #name_create {
     font-size: 2rem;
+    text-align: center;
 }
 
 #description_create {
