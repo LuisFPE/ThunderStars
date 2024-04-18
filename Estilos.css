@@ -19,13 +19,18 @@ body{
 #primera{    
     width: 100%;
     margin-top: 20vh;
-    display: flex;
+    display: grid;
     justify-content: space-around;
     margin-bottom: 5vh;
     font-size: 1.5rem;
 }
 
-article{
+#cargaSeleccion {
+    text-align: left;
+    align-self: center;
+}
+
+#desplegable {
     display: flex;
     flex-direction: row;
     align-items: center;

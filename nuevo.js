@@ -6,6 +6,25 @@ if (confirmarPrimero === null || confirmarSegundo === null) {
     localStorage.setItem('segundo', 20);
 }
 
+cargaPersonaje();
+function cargaPersonaje() {
+    const cargaPrimero = localStorage.getItem('primero');
+    const cargaSegundo = localStorage.getItem('segundo');
+
+    const buscaSection = document.getElementById('cargaSeleccion');
+    buscaSection.innerHTML = '';
+
+    let cargaDIV = document.createElement('div');
+    cargaDIV.setAttribute('id', 'cargaDIV');
+
+    let cargaH4 = document.createElement('h4');
+    cargaH4.setAttribute('id', 'cargaH4')
+    cargaH4.innerText = `Pagina desde ${cargaPrimero} hasta ${cargaSegundo}`;
+
+    cargaDIV.appendChild(cargaH4);
+    buscaSection.appendChild(cargaDIV);
+}
+
 localStorage.setItem('primero', 0);
 localStorage.setItem('segundo', 20)
 
@@ -30,6 +49,7 @@ botonMas.addEventListener('click', (e) => {
 
     localStorage.setItem('primero', primero);
     localStorage.setItem('segundo', segundo);
+    cargaPersonaje();
     getPersonajes(primero, segundo);
 })
 
@@ -49,6 +69,7 @@ botonMenos.addEventListener('click', (e) => {
 
     localStorage.setItem('primero', primero);
     localStorage.setItem('segundo', segundo);
+    cargaPersonaje();
     getPersonajes(primero, segundo);
 })
 
