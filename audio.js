@@ -45,3 +45,15 @@ function playAudio() {
     let audio = document.getElementById('my_audio');
     audio.play();
 } */
+
+/* let musica = document.getElementById('body');
+musica.addEventListener('mouseover', (e) => {
+    let audio = document.getElementById('my_audio');
+    audio.play();
+}) */
+
+const optionMusic = document.getElementById('names');
+optionMusic.addEventListener('click', (e) => {
+    let audio = document.getElementById('my_audio');
+    audio.play();
+});
