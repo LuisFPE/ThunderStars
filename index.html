@@ -14,7 +14,8 @@
     <link rel="stylesheet" href="./Estilos.css">
 
 </head>
-<body>
+<body onmousemove="playAudio()">
+     <div class="fire"></div>
     <img src="./img/banner.png" alt="" id="Banner">
     <h1 id="titulo">ThunderStars</h1>
     <section id="primera">
@@ -42,7 +43,11 @@
         </section>
     </div>
 
+    <audio id="my_audio" src="/home/belen/Escritorio/bootcamp/ThunderStars/ThunderStars/mp3/bsoMarvel.mp3" preload="auto" loop></audio>
+    
 
     <script src="./nuevo.js"></script>
+    <script src="./audio.js"></script>
+
 </body>
 </html>
