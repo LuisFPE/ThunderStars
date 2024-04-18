@@ -1,53 +1,73 @@
 // Crear un localStorage si no existe
-let confirmar = localStorage.getItem('numeracion');
-if (confirmar === null) {
-    localStorage.setItem('numeracion', 0);
+let confirmarPrimero = localStorage.getItem('primero');
+let confirmarSegundo = localStorage.getItem('segundo');
+if (confirmarPrimero === null || confirmarSegundo === null) {
+    localStorage.setItem('primero', 0);
+    localStorage.setItem('segundo', 20);
 }
 
+localStorage.setItem('primero', 0);
+localStorage.setItem('segundo', 20)
+
+let primero = localStorage.getItem('primero');
+let segundo = localStorage.getItem('segundo')
+primero = parseInt(primero);
+segundo = parseInt(segundo);
+
 // Uso de los botones para sumar o restar personajes
-/* const botonMas = document.getElementById('mas');
+const botonMas = document.getElementById('mas');
 const botonMenos = document.getElementById('menos');
 
-let primero;
-let segundo;
-confirmar = parseInt(confirmar);
 
 botonMas.addEventListener('click', (e) => {
-    confirmar = localStorage.getItem('numeracion');
-    confirmar = parseInt(confirmar);
-    primero = confirmar + 20;
-    segundo = primero + 20;
-    localStorage.setItem('numeracion', primero);
+    primero = localStorage.getItem('primero');
+    segundo = localStorage.getItem('segundo');
+    primero = parseInt(primero);
+    segundo = parseInt(segundo);
+
+    primero += 20;
+    segundo += 20;
+
+    localStorage.setItem('primero', primero);
+    localStorage.setItem('segundo', segundo);
     getPersonajes(primero, segundo);
 })
 
 botonMenos.addEventListener('click', (e) => {
-    confirmar = localStorage.getItem('numeracion');
-    confirmar = parseInt(confirmar);
-    if (confirmar > 20) {
-        primero = confirmar - 20;
-        segundo = primero - 20;
-        localStorage.setItem('numeracion', primero);
-    } else {
-        alert('Has llegado al minimo');
+    primero = localStorage.getItem('primero');
+    segundo = localStorage.getItem('segundo');
+    primero = parseInt(primero);
+    segundo = parseInt(segundo);
+
+    primero -= 20;
+    segundo -= 20;
+
+    if (primero < 0) {
         primero = 0;
         segundo = 20;
-        localStorage.setItem('numeracion', primero);
     }
+
+    localStorage.setItem('primero', primero);
+    localStorage.setItem('segundo', segundo);
     getPersonajes(primero, segundo);
-}) */
+})
 
 // Funcion de busqueda de personajes para que aparezcan en el desplegable
-getPersonajes();
-async function getPersonajes(){
-    // Condicionales para saber si los argumentos tienen info
-/*     let comprobar = segundo - primero;
-    if (comprobar !== 20){
-        primero = 0;
-        segundo = 20;
-    } */
+getPersonajes(primero, segundo);
+async function getPersonajes(primero, segundo){
+    // Eliminar las busquedas anteriores
+    let selectDelete = document.getElementById('names');
+    selectDelete.innerHTML = `<option class='' id="vacio" value="">Seleccione un personaje</option>`;
 
-    for (let i = 0; i < 20; i+=20) {
+
+    // Traer informacion del localStorage para el bucle de busquedas
+    let comprobarPrimero = localStorage.getItem('primero');
+    let comprobarSegundo = localStorage.getItem('segundo');
+    comprobarPrimero = parseInt(comprobarPrimero);
+    comprobarSegundo = parseInt(comprobarSegundo);
+
+
+    for (let i = primero; i < segundo; i+=20) {
         let strhash = "9ee928aa29d4ce8bb3cd70c67a2255ef" ;
         const url = new URL(`https://gateway.marvel.com:443/v1/public/characters?ts=1&apikey=062384275ca95f55e7ce656b34dab77a&hash=${strhash}&offset=${i}`)
 
@@ -67,22 +87,26 @@ async function getPersonajes(){
             optionBuscar.innerText = names[i].name;
         }
     }
+    cargaDelay();
 }
 
 // Funcion de espera que da margen a cargar todos los personajes y despues hace busqueda de la seleccion del desplegable
-setTimeout(() => {
-    const buscarEleccion = document.getElementsByClassName('nombre');
-    for (let i = 0; buscarEleccion.length > i; i++) {
-        let buscarID = buscarEleccion[i].id;
-        const optionBuscar = document.getElementById(buscarID);
-        optionBuscar.addEventListener('click', (e) => {
-            const optionDisable = document.getElementById('vacio');
-            optionDisable.setAttribute('disabled', 'yes');
-            getPersonajeSeleccionado(optionBuscar.id);
-        })
-    }
+cargaDelay();
+function cargaDelay() {
+    setTimeout(() => {
+        const buscarEleccion = document.getElementsByClassName('nombre');
+        for (let i = 0; buscarEleccion.length > i; i++) {
+            let buscarID = buscarEleccion[i].id;
+            const optionBuscar = document.getElementById(buscarID);
+            optionBuscar.addEventListener('click', (e) => {
+                const optionDisable = document.getElementById('vacio');
+                optionDisable.setAttribute('disabled', 'yes');
+                getPersonajeSeleccionado(optionBuscar.id);
+            })
+        }
 
-}, 1000 * 2);
+    }, 1000 * 2);
+}
 
 
 // Crear varios elementos de HTML para usar con la info de la API con el personaje
