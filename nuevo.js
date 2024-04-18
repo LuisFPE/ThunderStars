@@ -79,14 +79,7 @@ async function getPersonajes(primero, segundo){
     // Eliminar las busquedas anteriores
     let selectDelete = document.getElementById('names');
     selectDelete.innerHTML = `<option class='' id="vacio" value="">Seleccione un personaje</option>`;
-<<<<<<< HEAD
-
-/*     let audio = document.getElementById('my_audio');
-    audio.play(); */
-
-=======
     
->>>>>>> ivan
     // Traer informacion del localStorage para el bucle de busquedas
     let comprobarPrimero = localStorage.getItem('primero');
     let comprobarSegundo = localStorage.getItem('segundo');
@@ -201,8 +194,6 @@ async function getPersonajeSeleccionado(name) {
             MarvelComics_name = MarvelComics[i].name;
             MarvelComics_url = MarvelComics[i].resourceURI;
 
-            
-
             // Crear funcion async para llamar a la API con las URL que me da junto con los comics
             getComics();
             async function getComics() {
@@ -251,8 +242,7 @@ async function getPersonajeSeleccionado(name) {
             }
         }
     }
-    
-}; 
+};
 
 
 // Funcion para cuando un personaje no tiene comics en la API
@@ -269,4 +259,3 @@ function comicsNO() {
     comic_cardCreate.appendChild(comic_nameCreate);
     buscar_comic.appendChild(comic_cardCreate);
 }
-
