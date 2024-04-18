@@ -80,7 +80,9 @@ async function getPersonajes(primero, segundo){
     let selectDelete = document.getElementById('names');
     selectDelete.innerHTML = `<option class='' id="vacio" value="">Seleccione un personaje</option>`;
 
-
+    let audio = document.getElementById('my_audio');
+    audio.play();
+    
     // Traer informacion del localStorage para el bucle de busquedas
     let comprobarPrimero = localStorage.getItem('primero');
     let comprobarSegundo = localStorage.getItem('segundo');

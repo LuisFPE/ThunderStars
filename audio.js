@@ -23,7 +23,7 @@ function playAudio() {
 }
  */
 
-var audioPlayed = false;
+/* var audioPlayed = false;
 var context = null;
 
 document.onmousemove = function() {
@@ -42,6 +42,6 @@ function isAutoplayAllowed() {
 }
 
 function playAudio() {
-    var audio = document.getElementById('my_audio');
+    let audio = document.getElementById('my_audio');
     audio.play();
-}
+} */
