@@ -23,13 +23,18 @@ body{
 #primera{    
     width: 100%;
     margin-top: 20vh;
-    display: flex;
+    display: grid;
     justify-content: space-around;
     margin-bottom: 5vh;
     font-size: 1.5rem;
 }
 
-article{
+#cargaSeleccion {
+    text-align: left;
+    align-self: center;
+}
+
+#desplegable {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -96,7 +101,6 @@ article > input{
 
 #personaje {
     border-radius: 25px;
-    background-color: rgb(238, 95, 69);
     display: grid;
     justify-items: center;
     padding: 20px 10px;
@@ -125,25 +129,38 @@ article > input{
     justify-items: center;
 }
 
+@media (max-width: 1600px) {
+    #cards {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 1250px) {
+    #cards {
+        grid-template-columns: 1fr;
+    }
+}
+  
+
 .comic {
     display: grid;
     background-color: rgb(226, 223, 43);
     margin: 10px;
     border-radius: 25px;
     padding: 10px;
-    border: 2px solid yellowgreen;
 }
 
 .comic_image {
     border-radius: 25px;
     height: 300px;
     margin-bottom: 5px;
+    justify-self: center;
 }
 
 .comic_name {
     margin-top: 10px;
     font-size: 2rem;
-    text-align: justify;
+    text-align: center;
 }
 
 .comic_description {
