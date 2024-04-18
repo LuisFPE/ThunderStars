@@ -6,6 +6,9 @@ if (confirmarPrimero === null || confirmarSegundo === null) {
     localStorage.setItem('segundo', 20);
 }
 
+localStorage.setItem('primero', 0);
+localStorage.setItem('segundo', 20)
+
 let primero = localStorage.getItem('primero');
 let segundo = localStorage.getItem('segundo')
 primero = parseInt(primero);
