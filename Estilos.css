@@ -5,7 +5,11 @@ body{
 }
 
 #Banner{
-    width: 100%;
+    width: 100%; /* Ancho del banner */
+    height: 100%; /* Altura del banner */
+    border: 2px solid black; /* Borde sólido de 2px de ancho y color negro */
+   
+   
 }
 
 #titulo{

@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 // Readme de Ivan (MIO ¬¬)
 
 My Developer Account
@@ -43,3 +45,4 @@ Note: List the domain and path only - don't include "http" or other scheme desig
 
 Read more about how to authorize referring domains in browser-based apps and web sites.
 
+>>>>>>> f9e2ea04bb50da8ca8eb9c0438b1aee5b623093b
